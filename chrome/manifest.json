@@ -1,0 +1,12 @@
+{
+	"manifest_version": 3,
+	"name": "PassGen",
+	"version": "0.0.1",
+	"description": "Password generator through hashing. Use of master key",
+	"author": "L3Th4L, idea stolen from N48IN",
+	"permissions": ["storage", "tabs"],
+	"action": {
+		"default_title": "PassGen | A password generator",
+		"default_popup": "popup.html"
+	}
+}
