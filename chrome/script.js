@@ -3,6 +3,12 @@ import { Sha256 } from "./sha256.mjs";
 const form = document.querySelector("form");
 const passdiv = document.querySelector("#passdiv");
 
+// Prevent to copy masterkey
+const masterKeyField = document.querySelector("#masterkey");
+masterKeyField.addEventListener('copy', (e) => {
+    e.preventDefault();
+})
+
 function showPassword(password) {
     let pass = passdiv.querySelector("#pass");
     let copy = passdiv.querySelector("#copy-btn");
@@ -50,8 +56,6 @@ function showError(err) {
     p.disabled = "disabled";
     p.style = "color: red;";
     passdiv.appendChild(p);
-
-
 }
 
 function generatePassword(masterKey, platform, name, num) {
